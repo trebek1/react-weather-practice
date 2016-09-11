@@ -4,7 +4,12 @@ var WeatherForm = React.createClass({
 	clickHandler: function(event){
 		event.preventDefault();
 		var value = this.refs.location.value; 
-		this.refs.location.value = ''; 
+		
+		if(value.length > 0){
+			this.refs.location.value = ''; 
+			this.props.onSearch(value);	
+		}
+		
 	},
 	render: function(){
 		return(
