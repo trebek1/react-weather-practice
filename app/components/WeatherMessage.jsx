@@ -5,7 +5,7 @@ var WeatherForm = React.createClass({
 	render: function(){
 		return(
 			<div>
-				<h3>This is the message</h3>
+				The temperature is {this.props.temp} in {this.props.location}
 			</div>
 		)
 	}
